@@ -1,3 +1,4 @@
+variables;
 %Recibir sonido
 %Filtrar las bandas
 % Record your voice for 5 seconds.
@@ -15,8 +16,13 @@ myRecording = getaudiodata(recObj);
 % Plot the waveform.
 plot(myRecording);
 %Separar bandas
-canal1=PasaBanda(myRecording, fl1,fu1);%fl y fu las frecuenciias en las que se encuentra el canal
-canal2=PasaBanda(myRecording, fl2,fu2);
-canal3=PasaBanda(myRecording, fl3,fu3);
+canal1=PasaBanda(myRecording, F1-50,F1+210);%fl y fu las frecuenciias en las que se encuentra el canal
+canal2=PasaBanda(myRecording, F2-50,F2+210);
+canal3=PasaBanda(myRecording, F3-50,F3+210);
+%Reconocer Header
+noheaduno=Hederd(canal1,F1,Df,Fs,Dt);
+data=Taild(noheaduno,F1,Df,Fs,Dt);
+data_bits=DFSK(data,F1,Df,Fs,Dt);
+
 
 
