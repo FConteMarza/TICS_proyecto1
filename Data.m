@@ -22,6 +22,7 @@ imshow(x1); % mostrar imagen
 z=reshape(x1,M,1); % Reordeno la imagen
 
 z0=[1 1 1 1 0 0 0 0];
-z1=[z0 z'];
+z2=[0 0 0 0 1 1 1 1];
+z1=[z0 z' z2];
 
 end
