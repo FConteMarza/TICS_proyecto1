@@ -12,7 +12,8 @@ for i=1:n
     P1 = P2(1:np/2+1);
     P1(2:end-1) = 2*P1(2:end-1);
     au= find(P1==max(P1));
-    auxd=f(au);
+    auxd=f(au)
+    floor((auxd-Fi)/Df)
     data((i-1)*4+1:i*4)=de2bi(floor((auxd-Fi)/Df),4);
 end
 end
