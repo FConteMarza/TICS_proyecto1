@@ -14,11 +14,13 @@ n=1;
 
 for i=1:l1  % de i a 24 columna
 
-for j=1:l2      
-        image(j,i)=Data(n);  
-        n=n+1;        
+    for j=1:l2      
+            image(j,i)=Data(n);  
+            n=n+1;        
     end
     
+end
+R=image;
 end
 
 

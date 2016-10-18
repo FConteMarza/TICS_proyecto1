@@ -11,7 +11,6 @@ for i=1:l
     P2 = abs(auxfft/np);
     P1 = P2(1:np/2+1);
     P1(2:end-1) = 2*P1(2:end-1);
-    plot(f,P1)
     au= find(P1==max(P1));
     auxd=f(au);
     if(15==round((auxd-Fi)/Df))
@@ -20,10 +19,8 @@ for i=1:l
         P2 = abs(auxfft/np);
         P1 = P2(1:np/2+1);
         P1(2:end-1) = 2*P1(2:end-1);
-        plot(f,P1)
         au= find(P1==max(P1));
         auxd=f(au);
-        round((auxd-Fi)/Df)
         if(0==round((auxd-Fi)/Df))
             data=signal((j)*np+1:np*n);
             break

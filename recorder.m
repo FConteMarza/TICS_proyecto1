@@ -2,16 +2,16 @@ variables;
 %Recibir sonido
 %Filtrar las bandas
 % Record your voice for 5 seconds.
-recObj = audiorecorder;
-disp('Start speaking.')
-recordblocking(recObj, 20);%T tiempo a grabar
-disp('End of Recording.');
+% recObj = audiorecorder;
+% disp('Start speaking.')
+% recordblocking(recObj, 20);%T tiempo a grabar
+% disp('End of Recording.');
 
 % Play back the recording.
 %play(recObj);
 
 % Store data in double-precision array.
-myRecording = getaudiodata(recObj);
+myRecording = z2;%getaudiodata(recObj);
 
 % Plot the waveform.
 plot(myRecording);

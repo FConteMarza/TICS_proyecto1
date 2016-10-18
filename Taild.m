@@ -1,8 +1,8 @@
-function [ data ] = Taild( signal)
+function [ data ] = Taild( signal,Fi, Df, Fs, Dt)
 %eleimina informacion cola
 
-w2=Hederd(fliplr(signal)); %reordeno hacia atraz y elimino
+w2=Hederd(fliplr(signal),Fi, Df, Fs, Dt); %reordeno hacia atraz y elimino
 
-w3=fliplr(w2); % reordeno hacia adelante
+data=fliplr(w2); % reordeno hacia adelante
 
 end

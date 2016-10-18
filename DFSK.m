@@ -2,8 +2,8 @@ function [ data ] = DFSK( signal,Fi, Df, Fs, Dt )
 %descompone la señal en sus respectibos espacios de tiempo y mediante fft
 %identifica el simbolo correspondiente a la frecuencia obtenida.
 %recuperandose así la data original.
-np=floor(Dt/(1/Fs));
-n=length(signal)/np;
+np=round(Dt/(1/Fs));
+n=round(length(signal)/np);
 f = Fs*(0:(np/2))/np;
 data=zeros(1,n*4);
 for i=1:n
