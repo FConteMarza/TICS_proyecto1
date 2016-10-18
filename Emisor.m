@@ -10,7 +10,7 @@ z = Data('estrella.jpg');
 
 %Modulacion FSK( data,Fi, Df, Fs, Dt )
 
-z2=FSK( z,F1, Df, Fs, Dt );
+z2=FSK( z,F3, Df, Fs, Dt );
 
 %envio sonido
 
